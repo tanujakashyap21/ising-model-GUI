@@ -1,0 +1,18 @@
+2D Ising model verification report
+Critical temperature Tc = 2.269185
+
+Checks
+1. Low-temperature ordering: T = 0.000, <|m|> = 1.000000
+2. High-temperature disorder: T = 4.500, <|m|> = 0.045757
+3. Energy trend: e(T_low) = -2.000000, e(T_high) = -0.483667
+4. Heat-capacity peak: T = 0.000, C = nan
+5. Susceptibility peak: T = 0.000, chi = nan
+6. Diagnostic run at Tc: <m> = -0.209348, <|m|> = 0.558973, <e> = -1.401953
+
+Implementation notes
+7. Periodic boundaries are implemented with modular indexing and np.roll.
+8. One Monte Carlo sweep is defined as L*L attempted spin flips.
+
+Interpretation
+The scan is physically reasonable if low-T <|m|> is near 1, high-T <|m|> is near 0, energy increases with temperature, and C and chi peak near Tc.
+For this run, the temperature closest to Tc on the scan grid is T = 2.250.
